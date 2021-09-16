@@ -1,7 +1,7 @@
 Proyecto creado con [Create React App]
 
 ## Instalar las dependencias con
-## `npm run dev` o `yarn add`
+## `npm run dev` o `yarn install`
 ## Scrips Disponibles
 
 ### `yarn start`
