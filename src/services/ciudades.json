@@ -1,0 +1,30 @@
+[
+  {
+    "name": ""
+  },
+  {
+    "name": "Lomas de Zamora",
+    "lon": -58.406319,
+    "lat": -34.76088
+  },
+  {
+    "name": "Ciudad Autónoma de Buenos Aires",
+    "lon": -58.78326,
+    "lat": -30.954651
+  },
+  {
+    "name": "Tigre",
+    "lon": -58.57962,
+    "lat": -34.426029
+  },
+  {
+    "name": "La Plata",
+    "lon": -57.954529,
+    "lat": -34.921452
+  },
+  {
+    "name": "Quilmes",
+    "lon": -58.252651,
+    "lat": -34.724178
+  }
+]
