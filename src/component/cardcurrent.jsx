@@ -5,13 +5,13 @@ export const CardCurrent = ({ current, weather }) => {
   return (
     <Card>
       <Row className="align-items-end">
-        <Col sm="7" className="align-bottom">
+        <Col md="7" className="align-bottom">
           <Card.Img
             src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`}
             alt="logo"
           />
         </Col>
-        <Col sm="5" className="align-bottom">
+        <Col md="5" className="align-bottom">
           <h2>{current.main.temp.toString().split('.')[0]}°</h2>
         </Col>
       </Row>

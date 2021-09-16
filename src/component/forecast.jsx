@@ -24,7 +24,7 @@ const Forecast = ({ localidad }) => {
       {visible ? (
         <Card.Body>
           <Card.Title>
-            <h2>Clima en 5 dias</h2>
+            <h2>Pronostico a 5 dias</h2>
           </Card.Title>
           <Container>
             <Row>

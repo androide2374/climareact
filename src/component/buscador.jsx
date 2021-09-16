@@ -21,7 +21,7 @@ const Buscador = () => {
     <>
       <Form onSubmit={Buscar} className="pt-3">
         <Row>
-          <Col sm="10">
+          <Col md="10">
             <Form.Select aria-label="Seleccione una localidad" name="localidad">
               {ciudades.map((item) => (
                 <option key={item.name} value={item.name}>
@@ -30,23 +30,23 @@ const Buscador = () => {
               ))}
             </Form.Select>
           </Col>
-          <Col sm="2">
+          <Col md="2">
             <div className="d-grid gap-2">
               <Button type="submit">Buscar</Button>
             </div>
           </Col>
         </Row>
       </Form>
-      <Card.Title sm="12" className="pt-3">
+      <Card.Title md="12" className="pt-3">
         <h2>{currentCity}</h2>
       </Card.Title>
       <Row>
-        <Col sm="3" className="pt-2">
+        <Col sm="12" md="12" lg="3" className="pt-2">
           <Card>
             <CurrentWeather localidad={localidad} />
           </Card>
         </Col>
-        <Col sm="9" className="pt-2">
+        <Col sm="12" md="12" lg="9" className="pt-2">
           <Card>
             <Forecast localidad={localidad} />
           </Card>
