@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
 import CurrentWeather from './current'
 import Forecast from './forecast'
 import ciudades from '../services/ciudades.json'
-import { Card, Col, Row } from 'react-bootstrap'
+import { Card, Col, Row, Form, Button } from 'react-bootstrap'
 
 const Buscador = () => {
   const [localidad, setLocalidad] = useState('')

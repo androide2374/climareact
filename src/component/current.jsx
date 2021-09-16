@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Card, Container, Button, Row, Col } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import { GetCurrentCity } from '../services/currentcity'
-import getDayOfWeek from '../services/days'
 import { GetCurrent } from '../services/weather'
+import { CardCurrent } from './cardcurrent'
+import { Spinner } from './spinner'
 
 const CurrentWeather = ({ localidad }) => {
   const [current, setCurrent] = useState({})
@@ -26,35 +27,11 @@ const CurrentWeather = ({ localidad }) => {
             <h2>Clima actual</h2>
           </Card.Title>
           {current.weather.map((wea, index) => (
-            <Card key={index}>
-              <Row className="align-items-end">
-                <Col sm="7" className="align-bottom">
-                  <Card.Img
-                    src={`http://openweathermap.org/img/wn/${wea.icon}@2x.png`}
-                    alt="logo"
-                  />
-                </Col>
-                <Col sm="5" className="align-bottom">
-                  <h2>{current.main.temp.toString().split('.')[0]}°</h2>
-                </Col>
-              </Row>
-              <Card.Title>
-                <Container>HOY</Container>
-              </Card.Title>
-              <Card.Body>
-                <h5>Min: 1 °</h5>
-                <h5>Max: 2 °</h5>
-                <h6>Humedad: 3 %</h6>
-              </Card.Body>
-            </Card>
+            <CardCurrent key={index} current={current} weather={wea} />
           ))}
         </Card.Body>
       ) : (
-        <div className="d-flex justify-content-center">
-          <div className="spinner-border" role="status">
-            <span className="sr-only"></span>
-          </div>
-        </div>
+        <Spinner />
       )}
     </>
   )
